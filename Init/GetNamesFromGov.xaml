@@ -292,12 +292,12 @@
         </ui:ForEach.Body>
       </ui:ForEach>
     </Sequence>
-    <Assign DisplayName="Assign - Sort out_dt_FinalTable" sap:VirtualizedContainerService.HintSize="572,82" sap2010:WorkflowViewState.IdRef="Assign_12">
+    <Assign DisplayName="Assign - Sort out_dt_FinalTable" sap:VirtualizedContainerService.HintSize="572,82" sap2010:WorkflowViewState.IdRef="Assign_13">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[out_dt_FinalTable]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="sd:DataTable">[out_dt_FinalTable.AsEnumerable.OrderBy(Function(x) x("Liczba dzieci")).CopyToDataTable]</InArgument>
+        <InArgument x:TypeArguments="sd:DataTable">[out_dt_FinalTable.AsEnumerable.OrderByDescending(Function(x) x("Liczba dzieci")).CopyToDataTable]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:LogMessage DisplayName="Log Message - End GetNamesFromGov" sap:VirtualizedContainerService.HintSize="572,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Downloading information from http completed&quot;]" />
