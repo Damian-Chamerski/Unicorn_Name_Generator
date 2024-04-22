@@ -1,7 +1,7 @@
 {
   "name": "Unicorn_Name_Generator",
   "projectId": "3eb28f92-2e91-4265-b2b5-36c70b6b0f19",
-  "description": "The app takes the 10 most popular names from a given year and generates a Unicorn Name for them. The ready data is presented as a summary in Excel",
+  "description": "The app takes the most popular names from a given year and generates a Unicorn Name for them. The ready data is presented as a summary in Excel",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.22.2]",
