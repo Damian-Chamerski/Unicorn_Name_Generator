@@ -115,7 +115,7 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="634,3635" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence DisplayName="GetNamesFromGov" sap:VirtualizedContainerService.HintSize="634,3635" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="NamesResponse" />
     </Sequence.Variables>
@@ -171,7 +171,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="Assign - FirstName - split regex result" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign DisplayName="Assign - FirstName - split regex result (B)" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[FirstName]</OutArgument>
                 </Assign.To>
@@ -179,7 +179,7 @@
                   <InArgument x:TypeArguments="x:String">[BoysMatch(currentItem-1).ToString.Split("-")(0).Trim]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign DisplayName="Assign - FirstName - First letter to upper" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign DisplayName="Assign - FirstName - First letter to upper (B)" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[FirstName]</OutArgument>
                 </Assign.To>
@@ -187,7 +187,7 @@
                   <InArgument x:TypeArguments="x:String">[FirstName.Substring(0,1).ToUpper+FirstName.Substring(1).ToLower]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign DisplayName="Assign - KidsCount" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign DisplayName="Assign - KidsCount (B)" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[KidsCount]</OutArgument>
                 </Assign.To>
@@ -195,7 +195,7 @@
                   <InArgument x:TypeArguments="x:String">[BoysMatch(currentItem-1).ToString.Split("-")(1).Trim]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign DisplayName="Assign - RandomMonth" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign DisplayName="Assign - RandomMonth (B)" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[RandomMonth]</OutArgument>
                 </Assign.To>
@@ -235,7 +235,7 @@
           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
         </ui:HttpClient.UrlSegments>
       </ui:HttpClient>
-      <ui:Matches FirstMatch="{x:Null}" BuilderPattern="([A-ZĄĆĘŁŃÓŚŹŻ][A-ZĄĆĘŁŃÓŚŹŻ\-]+)\s*-\s*(\d+)*" DisplayName="Find Matching Patterns" sap:VirtualizedContainerService.HintSize="510,60" sap2010:WorkflowViewState.IdRef="Matches_3" Input="[NamesResponse]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;([A-ZĄĆĘŁŃÓŚŹŻ][A-ZĄĆĘŁŃÓŚŹŻ\\-]+)\\s*-\\s*(\\d+)&quot;,&quot;QuantifierFirstValue&quot;:&quot;*&quot;,&quot;QuantifierID&quot;:&quot;ANY&quot;,&quot;QuantifierName&quot;:&quot;Any (0 or more)&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="([A-ZĄĆĘŁŃÓŚŹŻ][A-ZĄĆĘŁŃÓŚŹŻ\-]+)\s*-\s*(\d+)*" RegexOption="Compiled" Result="[KidsMatch]" />
+      <ui:Matches FirstMatch="{x:Null}" BuilderPattern="([A-ZĄĆĘŁŃÓŚŹŻ][A-ZĄĆĘŁŃÓŚŹŻ\-]+)\s*-\s*(\d+)*" DisplayName="Find Matching Patterns - RegEx (G)" sap:VirtualizedContainerService.HintSize="510,60" sap2010:WorkflowViewState.IdRef="Matches_3" Input="[NamesResponse]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;([A-ZĄĆĘŁŃÓŚŹŻ][A-ZĄĆĘŁŃÓŚŹŻ\\-]+)\\s*-\\s*(\\d+)&quot;,&quot;QuantifierFirstValue&quot;:&quot;*&quot;,&quot;QuantifierID&quot;:&quot;ANY&quot;,&quot;QuantifierName&quot;:&quot;Any (0 or more)&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="([A-ZĄĆĘŁŃÓŚŹŻ][A-ZĄĆĘŁŃÓŚŹŻ\-]+)\s*-\s*(\d+)*" RegexOption="Compiled" Result="[KidsMatch]" />
       <ui:LogMessage DisplayName="Log Message - total girls' names" sap:VirtualizedContainerService.HintSize="510,141" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;A total of &quot;+KidsMatch.Count.ToString+&quot; girls' names were found.&quot;]" />
       <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For Each - Kid in NamesCount Range - (G)" sap:VirtualizedContainerService.HintSize="510,948" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[Enumerable.Range(1,in_NamesCount)]">
         <ui:ForEach.Body>
@@ -254,7 +254,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="Assign - FirstName - split regex result" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+              <Assign DisplayName="Assign - FirstName - split regex result (G)" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_7">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[FirstName]</OutArgument>
                 </Assign.To>
@@ -262,7 +262,7 @@
                   <InArgument x:TypeArguments="x:String">[KidsMatch(currentItem-1).ToString.Split("-")(0).Trim]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign DisplayName="Assign - FirstName - First letter to upper" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_8">
+              <Assign DisplayName="Assign - FirstName - First letter to upper (G)" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_8">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[FirstName]</OutArgument>
                 </Assign.To>
@@ -270,7 +270,7 @@
                   <InArgument x:TypeArguments="x:String">[FirstName.Substring(0,1).ToUpper+FirstName.Substring(1).ToLower]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign DisplayName="Assign - KidsCount" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_9">
+              <Assign DisplayName="Assign - KidsCount (G)" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_9">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[KidsCount]</OutArgument>
                 </Assign.To>
@@ -278,7 +278,7 @@
                   <InArgument x:TypeArguments="x:String">[KidsMatch(currentItem-1).ToString.Split("-")(1).Trim]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign DisplayName="Assign - RandomMonth" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_10">
+              <Assign DisplayName="Assign - RandomMonth (G)" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_10">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[RandomMonth]</OutArgument>
                 </Assign.To>
